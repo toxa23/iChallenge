@@ -1,26 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gSc-27-2pN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--View Controller-->
+        <scene sceneID="Vxx-eW-FGw">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
+                <viewController id="gSc-27-2pN" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jgd-Cd-0cd">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0PZ-j7-HHW">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Uh0-1r-sKk">
+                                    <size key="itemSize" width="151" height="151"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InstagramCell" id="NoH-Kb-hMW" customClass="InstagramImageCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="151"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="151" height="151"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dP1-Nn-M7P"/>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.33440975879769202" green="0.81182065217391308" blue="0.40630396354941051" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="dP1-Nn-M7P" firstAttribute="bottom" secondItem="NoH-Kb-hMW" secondAttribute="bottom" type="default" id="Bd5-8X-INv"/>
+                                            <constraint firstItem="dP1-Nn-M7P" firstAttribute="trailing" secondItem="NoH-Kb-hMW" secondAttribute="trailing" type="default" id="nsI-9t-8XI"/>
+                                            <constraint firstItem="dP1-Nn-M7P" firstAttribute="leading" secondItem="NoH-Kb-hMW" secondAttribute="leading" type="default" id="o5H-FT-Jwq"/>
+                                            <constraint firstItem="dP1-Nn-M7P" firstAttribute="top" secondItem="NoH-Kb-hMW" secondAttribute="top" type="default" id="zZN-q1-cWm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="dP1-Nn-M7P" id="APs-j9-QhY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="gSc-27-2pN" id="LUa-c6-uoH"/>
+                                    <outlet property="delegate" destination="gSc-27-2pN" id="Dqw-ct-910"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0PZ-j7-HHW" firstAttribute="trailing" secondItem="jgd-Cd-0cd" secondAttribute="trailing" type="default" id="IsX-qq-pqp"/>
+                            <constraint firstItem="0PZ-j7-HHW" firstAttribute="leading" secondItem="jgd-Cd-0cd" secondAttribute="leading" type="default" id="Ruz-sV-dej"/>
+                            <constraint firstItem="0PZ-j7-HHW" firstAttribute="bottom" secondItem="jgd-Cd-0cd" secondAttribute="bottom" type="default" id="aE6-Gr-Pcn"/>
+                            <constraint firstItem="0PZ-j7-HHW" firstAttribute="top" secondItem="jgd-Cd-0cd" secondAttribute="top" type="default" id="mZo-Fh-RW0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="instagramCollectionView" destination="0PZ-j7-HHW" id="0Ku-db-vwa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTx-i1-wnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-259" y="27"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
